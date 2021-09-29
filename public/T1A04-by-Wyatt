@@ -1,0 +1,18 @@
+Version 0.0.1</br>
+<h1 align=center>T1A04-by-Wyatt</h1>
+
+Reference Link
+<a href="https://w3schools.com/cssref/default.asp">w3schools</a><br>
+
+Properly done with a.css file listingall css commands for your website<br>
+Another wayto do CSS (Cascading Style Sheets: determine colors locations extra effects on the tags on your web page)<br>
+
+Hereis typical in document style
+<pre>
+h1 {
+color: #00ff00;}
+</pre><br>
+
+I do CSS inside the tag. It overpowers all other methods<br>
+
+<b > This is Bold</b><br>
