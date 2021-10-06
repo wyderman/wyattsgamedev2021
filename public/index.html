@@ -1,40 +1,13 @@
 <h1 align=center> <i><b> Game Dev By Wyatt </i></b> <h1>
 
-<head>
- <script>
-  
-function move_img {
-
-if "down":
-document.getElementById('i1').style.top=600 + "px";
-
-if "up":
-document.getElementById('i1').style.top=100 + "px";
-
-if "left":
-document.getElementById('i1').style.left=200 + "px";
-
-if "right":
-document.getElementById('i1').style.left=800 + "px";
-}
-
-</script>
-</head>
-
- <body>
-<img src="chadd.jpg"='i1' 
- style="position:absolute; left: 500; top: 100;">
-<br><br><br><br>
-<input type=button onClick=move_img('up') value='Up'>
-<br>
-<input type=button onClick=move_img('left') value='Left'>
-<input type=button onClick=move_img('right') value='right'>
-<br>
-<input type=button onClick=move_img('down') value='Down'>
-<br><br>
-
-</body>
+ <img src="chadd.jpg" id="I1" 
+  style="position:absolute; left: 500; top: 100;">
  
+ <input value="left" type=button onclick="{
+       let cVar01 = parseInt(document.getElementById('I1').style.left)
+       let result = cVar01 - 10
+       document.getElementById('I1').style.left = result
+       }">
  
  
  
