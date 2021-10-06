@@ -1,6 +1,33 @@
 <h1 align=center> <i><b> Game Dev By Wyatt </i></b> <h1>
- 
-<body>
+<head>
+ <script>
+  
+function move_img(str) {
+
+switch(str){
+case "down":
+document.getElementById('i1').style.top=600 + "px";
+break;
+
+case "up":
+document.getElementById('i1').style.top=100 + "px";
+break;
+
+case "left":
+document.getElementById('i1').style.left=200 + "px";
+break;
+
+case "right":
+document.getElementById('i1').style.left=800 + "px";
+break;
+
+}
+}
+//-->
+</script>
+</head>
+
+ <body>
 <img src="chadd.jpg"='i1' 
  style="position:absolute; left: 500; top: 100;">
 <br><br><br><br>
@@ -9,10 +36,14 @@
 <input type=button onClick=move_img('left') value='Left'>
 <input type=button onClick=move_img('right') value='right'>
 <br>
-<input type=button onClick=move_img('down') value='down'>
+<input type=button onClick=move_img('down') value='Down'>
 <br><br>
 
 </body>
+ 
+ 
+ 
+ 
 
   <input type=button value="red" onclick="{document.body.style.backgroundColor = '#ff0000'; document.body.style.colour = '#20b2aa'}"> <br>
    <input type=button value="blue" onclick="{document.body.style.backgroundColor = '#20b2aa'; document.body.style.colour = 'ff0000'}"> <br>
