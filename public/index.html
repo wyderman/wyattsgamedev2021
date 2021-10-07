@@ -15,12 +15,12 @@
        }">
   <input value="Up" type=button onclick="{
        let cVar03 = parseInt(document.getElementById('I1').style.top)
-       let result = cVar03 - 50
+       let result = cVar03 - 1
        document.getElementById('I1').style.left = result
        }">
   <input value="Down" type=button onclick="{
        let cVar04 = parseInt(document.getElementById('I1').style.top)
-       let result = cVar04 + 50
+       let result = cVar04 + 1
        document.getElementById('I1').style.left = result
        }">
  
@@ -31,6 +31,8 @@
     cVar01 height=window.innerHeight-50;
     el.style.left=width*Math.random() + "px";
     el.style.top=height*Math.random() + "px";
+  </head>
+  </style>
  
   <input type=button value="Red" onclick="{document.body.style.backgroundColor = '#ff0000'; document.body.style.colour = '#20b2aa'}"> <br>
    <input type=button value="Blue" onclick="{document.body.style.backgroundColor = '#20b2aa'; document.body.style.colour = 'ff0000'}"> <br>
