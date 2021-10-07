@@ -25,14 +25,20 @@
        }">
  
  <head>
-  <style>
-    var el=document.getElementById("Box1");
-     var width=window.innerWidth-50;
-      var height=window.innerHeight-50;
-       el.style.left=width*Math.random() + "px";
-        el.style.top=height*Math.random() + "px";
- </head>
-  </style>
+  <title>Fit the image in the box</title>
+   <style>
+#box_group1, #box_group2, #box_group3, #box_group4, #textbook {
+    position:absolute;
+     left:100px;
+      top:100px;      
+}
+#box1 {
+    padding:5px;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    float:left;
+}
  
   <input type=button value="Red" onclick="{document.body.style.backgroundColor = '#ff0000'; document.body.style.colour = '#20b2aa'}"> <br>
    <input type=button value="Blue" onclick="{document.body.style.backgroundColor = '#20b2aa'; document.body.style.colour = 'ff0000'}"> <br>
