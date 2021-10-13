@@ -40,6 +40,9 @@
  document.getElementById('myDiv01').innerHTML = 'A class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).<br>'}">                                               
 
 
+<script>
+const time = new Date().getHours();
+let greeting;
 if (time < 10) {
   greeting = "Good morning";
 } else if (time < 20) {
@@ -47,5 +50,8 @@ if (time < 10) {
 } else {
   greeting = "Good evening";
 }
+document.getElementById("demo").innerHTML = greeting;
+</script>
               
 <div id="myDiv01">Sex</div>
+ <div id="demo">slime</div>
