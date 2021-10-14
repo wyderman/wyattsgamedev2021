@@ -2,10 +2,6 @@
 
 <h1 align=center><b><i>T1A02-Lists-and-Tables-by-Wyatt</b></i></h1>
 
-<style>
- body {backgroud-color:coral;color:crimson;}
-</style>
-
 <input type=button value="Red" onclick="{document.body.style.backgroundColor = '#ff0000'; document.body.style.colour = '#20b2aa'}"> <br>
 <input type=button value="Blue" onclick="{document.body.style.backgroundColor = '#20b2aa'; document.body.style.colour = '#ff0000'}"> <br>
 
@@ -54,9 +50,10 @@ Make a 3 x 4 table, then make a link and image table with border = 0<br><br><br>
 Load an imagine and get it to move 10 pixels to the left using the button below<br>
 <image id=ellis.jpg" src="" style="position:relative; left:0; top:0; top:0; width:50; height:50; "><br>
 
-<input type=buttonvalue= "Go left" onclick="{
- document.getElementById('ellis.jpg').style.left = '200px' 
+<input type=buttonvalue= "Left" onclick="{
+ document.getElementById('ellis.jpg').style.left = '100px' 
   document.getElementById('myDiv01').innerHTML = 'It went left' 
 }"> <br>
 
 <div id="myDiv01">...</div>
+ <div id="ellis.jpg"></div>
