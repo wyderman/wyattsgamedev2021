@@ -49,11 +49,12 @@ Make a 3 x 4 table, then make a link and image table with border = 0<br><br><br>
 
 Load an imagine and get it to move 10 pixels to the left using the button below<br>
 <image id=ellis.jpg" src="" style="position:relative; left:0; top:0; top:0; width:50; height:50; "><br>
-
-<input type=buttonvalue= "Left" onclick="{
- document.getElementById('chase.jpg').style.left = '100px' 
-  document.getElementById('myDiv01').innerHTML = 'It went left' 
-}"> <br>
+ 
+<input value="Left" type=button onclick="{
+  let cVar01 = parseInt(document.getElementById('chase.jpg').style.left)
+   let result = cVar01 - 10
+    document.getElementById('I1').style.left = result
+}">  
 
 <div id="myDiv01"></div>
   <div id="chase.jpg"></div>
