@@ -15,13 +15,18 @@ Note: Javascript does use var and let for local variables.<br>
   document.getElementById('myDiv01').innerhtml = myIn01
 </pre>
          
-<h4? Example with workin code<h4>
+<h4? Example with working code<h4>
          
 <input id="myText01" type=text value="The Dog"><br>
                                                        
 <input type=button value="Show Variable" onclick={
  let myIn01 = document.getElementById('myText01').value
-  document.getElementById('myDiv01').innerHTML = document.getElementById('Text01').value
+  document.getElementById('myDiv01').innerHTML = myIn01
 }"><br>
   
-  <div id="myDiv01">Joseph Mother</div>
+<input type=button value="Using no variable" onclick="{
+ document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}"><br>
+        
+        
+<div id="myDiv01">Joseph Mother</div>
