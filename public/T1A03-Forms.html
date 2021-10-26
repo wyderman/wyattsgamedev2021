@@ -30,16 +30,9 @@ The following are all form elemets:<br:>
 <input type=text id="myText01" value="Wyatt"><br>
  If you check this checkbox you're a cheeky bastard: <input type=checkbox><br>
  
-<script>
-$(document).ready(function() {
-$("#but").click(function() {
-if ($("input[type=checkbox]").prop(
+if ("input type=checkbox").prop(
 ":checked")) {
-alert("Check box in Checked");
-} else {
-alert("Check box is Unchecked");
-}
-});
+alert("The disrespect is immeasurable.");
 });
 </script> 
   
