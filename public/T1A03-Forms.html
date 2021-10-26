@@ -22,33 +22,32 @@
         document.getElementById('myThree').style.backgroundColor = '#ff0000';
          document.getElementById('myRad01').style.backgroundColor = '#ff0000';}"> <br>
 
+function readIMG(input) {
+  if (input.files && input.files[0]) {
+  var reader = new FileReader();
 
-
-
-
+reader.onload = function (e) {
+ alert("So ugly, probably smelly aswell");
+}
 
 <font color=blue> Prove you can use: Forms</font>
 
-The following are all form elemets (add to them):<br:>
+The following are all form elemets:<br:>
  <form >
   
 <input type=text id="myText01" value="Wyatt"><br>
- Checkbox: <input type=checkbox><br>
-  Radio Stations:<br>
-   107.7 <input type=radio name="myRad01" value=""><br>
-    83.5 <input type=radio name="myRad01" value=""><br>
+ If you check this checkbox you're a cheeky bastard: <input type=checkbox><br>
+  Kwidzinski Family:<br>
+   Tony <input type=radio name="myRad01" value=""><br>
+    Susan <input type=radio name="myRad01" value=""><br>
+     Austin <input type=radio name="myRad01" value=""><br>
+      Gabriel <input type=radio name="myRad01" value=""><br>
   
 hidden:<input type=hidden><br>
  file:<input type=file><br>
   reset:<input type =reset><br>
    Submit (advanced)<input type=submit><br>
 
-function getFileType(file) {
-  if(file.typematch('image.*'))
-    alert(Yo ass ugly and probably smelly to)";
-      return 'image';
-}
- 
 Button: <input type=button value=click onclick="alert('I lack a will to thrive')"><br>
  Textarea: <br>
   <textarea id="myArea01" cols=60 rows=5 > The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. beep A single lap should be completed each time you hear this sound. ding Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.
