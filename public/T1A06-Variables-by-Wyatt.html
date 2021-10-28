@@ -2,6 +2,20 @@ Verison 0.0.1
 
 <h2 align=center><b><i>T1A06-Variables-by-Wyatt</b></i></h2>
 
+<img src="tony" id="I1" 
+  style="width:200px; height:200px; position:absolute; left: 500px; top: 50px;">
+ 
+ <input value="Left" type=button onclick="{
+  let cVar01 = parseInt(document.getElementById('I1').style.left)
+   let result = cVar01 - 10
+    document.getElementById('I1').style.left = result
+}">
+  <input value="Right" type=button onclick="{
+   let cVar02 = parseInt(document.getElementById('I1').style.left)
+    let result = cVar02 + 10
+     document.getElementById('I1').style.left = result
+}">
+
 <a href="https://www.w3schools.com/js/js_variables.asp"> Good reference to Variables in Javascript and other langauges</a><br>
         
 Other Langauges use: bool, int, float, char, string, int_8, int_16, etc...<br>
