@@ -14,11 +14,15 @@ for (; i < len; i++) {
 }
 </pre>
 
-const n = 5;
+function slide() {
+    var num = 0, style = document.getElementById('container').style;
+    window.setInterval(function () {
+        // increase by num 1, reset to 0 at 4
+        num = (num + 1) % 4;
 
-// looping from i = 1 to 5
-for (let i = 1; i <= n; i++) {
-    console.log(`Only 5 times.`);
+        // -600 * 1 = -600, -600 * 2 = -1200, etc 
+        style.marginLeft = (-600 * num) + "px"; 
+    }, 3000); 
 }
 
 <h4> Example of working code</h4>
