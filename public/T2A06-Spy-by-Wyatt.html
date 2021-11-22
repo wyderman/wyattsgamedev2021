@@ -23,7 +23,7 @@ Verison 0.0.1
 
 <input type=button value="decrypt" onclick="{
  let myTemp = ''
-   myString = document.getElementById('myArea01').value.toUpperCase().split('')
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'f') {myTemp  = 'e'} 
