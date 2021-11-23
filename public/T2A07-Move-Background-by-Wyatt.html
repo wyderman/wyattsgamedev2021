@@ -14,14 +14,15 @@ Verison 0.0.1
   myTemp = '100px 0px'
   myGlobal -= 5
   myTemp =  myGlobal + 'px 0px'
-  document.getElementById('myBody').style.backgroundPosition =myTemp
+  document.getElementById('myBody').style.backgroundPosition = myTemp
 
 }">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
-  myClock = setInterval(function(){
-     document.getElementById('myButton01').click() 
+  var myTimer = setInterval(myClock);
+  function myClock() {
+    document.getElementById('myButton01').click() 
   }, 100)
     
 }">
