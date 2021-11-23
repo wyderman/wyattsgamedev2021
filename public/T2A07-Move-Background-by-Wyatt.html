@@ -6,7 +6,6 @@ Verison 0.0.1
 
 <script>
    let myGlobal = 0;
-   
    let myClock
 </script>
 
@@ -20,13 +19,12 @@ Verison 0.0.1
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
-  var myTimer = setInterval(myClock);
-  function myClock() {
-    document.getElementById('myButton01').click() 
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click() 
   }, 100)
     
 }">
-
+   
 <input type=button value="Image Right" onclick="{
   document.getElementById('jeff.jpg').style.left = parseInt(document.getElementById('jeff.jpg').style.left) + 10 + 'px'
 }"><br><br>
