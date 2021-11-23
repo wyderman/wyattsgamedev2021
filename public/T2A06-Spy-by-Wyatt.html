@@ -13,7 +13,7 @@ Verison 0.0.1
       if (myString[myLoop] == 'e') {myTemp  = 'f'} 
       if (myString[myLoop] == 'h') {myTemp  = 'i'} 
       myString[myLoop] = myTemp
-   }
+}
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
 
@@ -23,7 +23,7 @@ Verison 0.0.1
 
 <input type=button value="Decrypt" onclick="{
  let myTemp = ''
-   myString = document.getElementById('myArea03').value.toLowerCase().split('')
+   myString = document.getElementById('myArea02').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'f') {myTemp  = 'e'} 
