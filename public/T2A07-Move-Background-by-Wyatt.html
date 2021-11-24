@@ -6,7 +6,8 @@ Verison 0.0.1
 
 <script>
    let myGlobal = 0;
-   let myClock
+   let myClock01
+   let myClock02
 </script>
 
 <input id="myButton01" type=button value="background move left" onclick="{
@@ -18,8 +19,8 @@ Verison 0.0.1
 }">
 
 <input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  myClock = setInterval(function(){
+  clearInterval(myClock01)
+  myClock01 = setInterval(function(){
      document.getElementById('myButton01').click() 
   }, 100)
     
