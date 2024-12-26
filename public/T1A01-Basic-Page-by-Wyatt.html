@@ -1,66 +1,139 @@
 <h5> Verison 0.1.0</h5>
-<h1 align=center><b><i>T1A01-Basic-web-page-by-Wyatt</b></i></h1>
-                               
-<b> This is not bold</b>
-<i> This is not italic</i> <br>
+<h1 align=center><b><i>T1A01-Basic-Calc-by-Wyatt</b></i></h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-<img src="ellis.jpg"{
- style="position:fixed; right:0px; top:0px; width:200px; height:150px;
-}
-     
-<input type=button value="Piss Yellow" onclick="{document.body.style.backgroundColor = '#FFF700'; document.body.style.colour = '#1EC823'}"> <br>
-<input type=button value="Shrek Green" onclick="{document.body.style.backgroundColor = '#1EC823'; document.body.style.colour = '#FFF700'}"> <br>
-                                                                                                                                          
-<input type=button value="0. Pseudo Code" onclick="{
- document.getElementById('myDiv01').innerHTML = 'Pseudocode literally means ‘fake code’. It is an informal and contrived way of writing programs in which you represent the sequence of actions and instructions aka algorithms, in a form that humans can easily understand.'}">                                                  
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
 
-<input type=button value="1. Input/Output" onclick="{ 
- document.getElementById('myDiv01').innerHTML = 'An input/output statement or IO statement is a portion of a program that instructs a computer how to read and process information. It pertains to gather information from an input device, or sending information to an output device.<br>'}">
+        main {
+            padding: 20px;
+        }
 
-<input type=button value="2. Variables" onclick="{
- document.getElementById('myDiv01').innerHTML = 'Variables are storage mediums for data/values<br>'}">
+        .calculator {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-<input type=button value="3. Loops" onclick="{
- document.getElementById('myDiv01').innerHTML = 'Loops are used in JavaScript to perform repeated tasks based on a condition.<br>'}">
+        .calculator h2 {
+            margin-top: 0;
+        }
 
-<input type=button value="4. Decisions" onclick="{
-   document.getElementById('myDiv01').innerHTML ='Decisions use the if statement to make true false variable decisions.<br>'}">
-                                                 
-<input type=button value="5. Functions" onclick="{
- document.getElementById('myDiv01').innerHTML = 'A function allows you to define a block of code, give it a name and then execute it as many times as you want.<br>'}">
-                                                                         
-<input type=button value="6. Events" onclick="{
- document.getElementById('myDiv01').innerHTML = 'Events are actions or occurrences that happen in the system.<br>'}">
-                                                                         
-<input type=button value="7. Arrays" onclick="{
- document.getElementById('myDiv01').innerHTML = 'An array is a data structure, which can store a fixed-size collection of elements of the same data type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.<br>'}">
-                                                 
-<input type=button value="8. Objects" onclick="{
- document.getElementById('myDiv01').innerHTML = 'An object is an abstract data type created by a developer. It can include multiple properties and methods and may even contain other objects.<br>'}">       
-                                                                         
-<input type=button value="9. Classes" onclick="{
- document.getElementById('myDiv01').innerHTML = 'A class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).<br>'}">                                               
+        .calculator label {
+            display: block;
+            margin-bottom: 10px;
+        }
 
+        .calculator input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
 
-<script>
-if (hour < 10) {
-  greeting = "Good morning";
-} else if (hour < 20) {
-  greeting = "Good day";
-} else {
-  greeting = "Good evening";
-}
-</script>
-              
-Interesting Video I got recommended last year
-<iframe width: 350; height: 300; left: -150; 
-  src="https://www.youtube.com/embed/kFER3QCAboc"
-  title= Youtube video player"
-  frameborder="1"
-  allow="accelerometer; 
-  autoplay; clipboard-write; encrypted-media; 
-  gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>                           
-                                                      
+        .calculator button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Calculators</h1>
+    </header>
+    <main>
+        <!-- Future Value Calculator -->
+        <div class="calculator" id="future-value-calculator">
+            <h2>Future Value Calculator</h2>
+            <label for="fv-monthly-investment">Monthly Investment ($):</label>
+            <input type="number" id="fv-monthly-investment" placeholder="Enter amount">
+
+            <label for="fv-annual-return">Annual Return (%):</label>
+            <input type="number" id="fv-annual-return" placeholder="Enter annual return">
+
+            <label for="fv-years">Years:</label>
+            <input type="number" id="fv-years" placeholder="Enter number of years">
+
+            <button onclick="calculateFutureValue()">Calculate Future Value</button>
+            <div class="result" id="fv-result"></div>
+        </div>
+
+        <!-- Loan Payment Calculator -->
+        <div class="calculator" id="loan-payment-calculator">
+            <h2>Loan Payment Calculator</h2>
+            <label for="loan-amount">Loan Amount ($):</label>
+            <input type="number" id="loan-amount" placeholder="Enter loan amount">
+
+            <label for="loan-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="loan-rate" placeholder="Enter interest rate">
+
+            <label for="loan-years">Loan Term (years):</label>
+            <input type="number" id="loan-years" placeholder="Enter loan term">
+
+            <button onclick="calculateLoanPayment()">Calculate Payment</button>
+            <div class="result" id="loan-result"></div>
+        </div>
+    </main>
+
+    <script>
+        function calculateFutureValue() {
+            const monthlyInvestment = parseFloat(document.getElementById('fv-monthly-investment').value);
+            const annualReturn = parseFloat(document.getElementById('fv-annual-return').value) / 100;
+            const years = parseInt(document.getElementById('fv-years').value);
+            const months = years * 12;
+            const monthlyRate = annualReturn / 12;
+
+            const futureValue = monthlyInvestment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+
+            document.getElementById('fv-result').innerText = `Future Value: $${futureValue.toFixed(2)}`;
+        }
+
+        function calculateLoanPayment() {
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const annualRate = parseFloat(document.getElementById('loan-rate').value) / 100;
+            const years = parseInt(document.getElementById('loan-years').value);
+            const months = years * 12;
+            const monthlyRate = annualRate / 12;
+
+            const payment = loanAmount * (monthlyRate / (1 - Math.pow(1 + monthlyRate, -months)));
+
+            document.getElementById('loan-result').innerText = `Monthly Payment: $${payment.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>         
+
 <div id="myDiv01"</div>
