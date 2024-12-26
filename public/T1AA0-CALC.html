@@ -1,0 +1,139 @@
+<h5> Verison 0.1.0</h5>
+<h1 align=center><b><i>T1A01-Basic-Calc-by-Wyatt</b></i></h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .calculator {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator h2 {
+            margin-top: 0;
+        }
+
+        .calculator label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .calculator input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .calculator button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Calculators</h1>
+    </header>
+    <main>
+        <!-- Future Value Calculator -->
+        <div class="calculator" id="future-value-calculator">
+            <h2>Future Value Calculator</h2>
+            <label for="fv-monthly-investment">Monthly Investment ($):</label>
+            <input type="number" id="fv-monthly-investment" placeholder="Enter amount">
+
+            <label for="fv-annual-return">Annual Return (%):</label>
+            <input type="number" id="fv-annual-return" placeholder="Enter annual return">
+
+            <label for="fv-years">Years:</label>
+            <input type="number" id="fv-years" placeholder="Enter number of years">
+
+            <button onclick="calculateFutureValue()">Calculate Future Value</button>
+            <div class="result" id="fv-result"></div>
+        </div>
+
+        <!-- Loan Payment Calculator -->
+        <div class="calculator" id="loan-payment-calculator">
+            <h2>Loan Payment Calculator</h2>
+            <label for="loan-amount">Loan Amount ($):</label>
+            <input type="number" id="loan-amount" placeholder="Enter loan amount">
+
+            <label for="loan-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="loan-rate" placeholder="Enter interest rate">
+
+            <label for="loan-years">Loan Term (years):</label>
+            <input type="number" id="loan-years" placeholder="Enter loan term">
+
+            <button onclick="calculateLoanPayment()">Calculate Payment</button>
+            <div class="result" id="loan-result"></div>
+        </div>
+    </main>
+
+    <script>
+        function calculateFutureValue() {
+            const monthlyInvestment = parseFloat(document.getElementById('fv-monthly-investment').value);
+            const annualReturn = parseFloat(document.getElementById('fv-annual-return').value) / 100;
+            const years = parseInt(document.getElementById('fv-years').value);
+            const months = years * 12;
+            const monthlyRate = annualReturn / 12;
+
+            const futureValue = monthlyInvestment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+
+            document.getElementById('fv-result').innerText = `Future Value: $${futureValue.toFixed(2)}`;
+        }
+
+        function calculateLoanPayment() {
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const annualRate = parseFloat(document.getElementById('loan-rate').value) / 100;
+            const years = parseInt(document.getElementById('loan-years').value);
+            const months = years * 12;
+            const monthlyRate = annualRate / 12;
+
+            const payment = loanAmount * (monthlyRate / (1 - Math.pow(1 + monthlyRate, -months)));
+
+            document.getElementById('loan-result').innerText = `Monthly Payment: $${payment.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>                                                
+                                                      
+<div id="myDiv01"</div>
